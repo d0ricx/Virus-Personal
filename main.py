@@ -30,7 +30,7 @@ def on_close():
 root = Tk()
 root.protocol("WM_DELETE_WINDOW", on_close)
 
-root.protocol("-fullscreen", True)
-root.protocol("-topmost" True)
+root.attributes("-fullscreen", True)
+root.attributes("-topmost", True)
 
 root.mainloop()
