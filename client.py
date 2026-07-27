@@ -15,7 +15,7 @@ import os
 class Client:
     BUFFER_SIZE: Final[int] = 1024
 
-    def __init__(self, host: str = "localhost", port: int = 8080) -> None:
+    def __init__(self, host: str = "192.168.1.129", port: int = 8080) -> None:
         self.host = host
         self.port = port
         self.socket: socket | None = None

@@ -9,7 +9,7 @@ import zipfile
 class Server:
     VERSION: Final[str] = "0.0.1"
 
-    def __init__(self, host: str = "127.0.0.1", port: int = 8080) -> None:
+    def __init__(self, host: str = "192.168.1.129", port: int = 8080) -> None:
         self.host = host or gethostname()
         self.port = port
         self.server: socket | None = None
